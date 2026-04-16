@@ -374,7 +374,7 @@ msg_ok:         defm    "ULA palette loaded: ", 0
 msg_help:
     defm    "RECOLOR 1.0 - ULA palette loader", 13
     defm    "Shrek/MB Maniax, 2026", 13
-    defm    "Idea: Luzie67", 13
+    defm    "Idea: Bernhard (Luzie67)", 13
     defb    13
     defm    "Loads a 512 B .NXP palette into", 13
     defm    "the ULA first palette.", 13
