@@ -76,15 +76,6 @@ MAIN_NOT_HELP:
 
     call    UPLOAD_PALETTE_ULA
 
-    ; enable enhanced ULA palette lookup for classic ULA colours
-    ld      bc, NEXTREG_SEL
-    ld      a, NR_ULA_CTRL
-    out     (c), a
-    ld      bc, NEXTREG_DAT
-    in      a, (c)
-    or      $08
-    out     (c), a
-
     ei
     ld      hl, msg_ok
     call    PRINT_MSG
@@ -372,7 +363,7 @@ msg_err_size:   defm    "Bad NXP size (need 512 B)", 13, 0
 msg_ok:         defm    "ULA palette loaded: ", 0
 
 msg_help:
-    defm    "RECOLOR 1.0 - ULA palette loader", 13
+    defm    "RECOLOR 1.1 - ULA palette loader", 13
     defm    "Shrek/MB Maniax, 2026", 13
     defm    "Idea: Bernhard (Luzie67)", 13
     defb    13
